@@ -18,7 +18,7 @@ public static void main(String args[])
     }
     public final Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         Uri uri = 'https://api.gojekapi.com/v7/customers/signup'; // contoh
-        MatrixCursor matrixCursor;
+        // MatrixCursor matrixCursor;
         // Intrinsics.checkNotNullParameter(uri, "");
         Context context = getContext();
         // Intrinsics.onTransact((Object) context);

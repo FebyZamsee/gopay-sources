@@ -3,20 +3,20 @@ public class signature
 {  
 public static void main(String args[])  
 {  
-    private final String read(String str) {
-        if (str != null) {
-            try {
-                Context context = getContext();
-                // Intrinsics.onTransact((Object) context);
-                String str2 = context.getPackageManager().getPackageInfo(str, 0).versionName;
-                // Intrinsics.checkNotNullExpressionValue(str2, "");
-                return str2;
-            } catch (Exception unused) {
-            }
-        }
-        return "1.0";
-    }
-    public final Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
+    // private final String read(String str) {
+    //     if (str != null) {
+    //         try {
+    //             Context context = getContext();
+    //             // Intrinsics.onTransact((Object) context);
+    //             String str2 = context.getPackageManager().getPackageInfo(str, 0).versionName;
+    //             // Intrinsics.checkNotNullExpressionValue(str2, "");
+    //             return str2;
+    //         } catch (Exception unused) {
+    //         }
+    //     }
+    //     return "1.0";
+    // }
+    // public final Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         Uri uri = 'https://api.gojekapi.com/v7/customers/signup'; // contoh
         // MatrixCursor matrixCursor;
         // Intrinsics.checkNotNullParameter(uri, "");
@@ -34,7 +34,7 @@ public static void main(String args[])
             // }
             Context context2 = getContext();
             // Intrinsics.onTransact((Object) context2);
-            String nameForUid = context2.getPackageManager().getNameForUid(Binder.getCallingUid());  // Location -> com\google\android\gms\common\wrappers\PackageManagerWrapper.java
+            String nameForUid = args[0] //context2.getPackageManager().getNameForUid(Binder.getCallingUid());  // Location -> com\google\android\gms\common\wrappers\PackageManagerWrapper.java
             String read2 = read(nameForUid);
             Context context3 = getContext();
             // Intrinsics.onTransact((Object) context3);
@@ -82,6 +82,6 @@ public static void main(String args[])
         //     matrixCursor2.addRow(strArr3);
         //     matrixCursor = matrixCursor2;
         // }
-    }
+    // }
 }  
 }
